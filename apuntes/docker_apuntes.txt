@@ -1,0 +1,9 @@
+
+docker logs --follow <container ID>
+docker exec -it <container ID> bash
+
+
+VOLUME
+
+docker run -d --rm -p 8080:80 --mount source=<VOLUME ID>,target=<PATH CONTAINER> nginx
+docker run -d --rm -v <PATH LOCAL>:<PATH CONTAINER> nginx

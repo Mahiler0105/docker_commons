@@ -1,0 +1,20 @@
+TOPICS
+======
+
+kafka-topics.sh --bootstrap-server localhost:9092 --create --topic spring-topic --partitions 5 --replication-factor 1
+
+kafka-topics.sh --list -bootstrap-server localhost:9092
+
+kafka-topics.sh --describe --topic spring-topic -bootstrap-server localhost:9092
+
+
+CREATE PRODUCER
+===============
+
+kafka-console-producer.sh --topic spring-topic --bootstrap-server localhost:9092
+
+
+CREATE CONSUMER
+===============
+
+kafka-console-consumer.sh --topic spring-topic --from-beginning --bootstrap-server localhost:9092
